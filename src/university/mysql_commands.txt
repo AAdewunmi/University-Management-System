@@ -1,0 +1,110 @@
+
+This file contains information on creating a database for the University Management System project. 
+It's assumed that this process is performed at MySQL command line.
+
+Tasks:
+
+1. Create Database
+SQL Command:
+create database ums;
+
+2. Switch to the ams database
+SQL Command:
+use ums;
+
+3. Create login table
+SQL Command:
+create table login (
+    username varchar(255),
+    password varchar(255)
+);
+
+4. Insert values into login table
+SQL Command:
+insert into login values('admin', 'admin');
+
+5. Create student table
+SQL Command:
+create table student (
+    name varchar(255),
+    fathers_name varchar(255),
+    age varchar(255),
+    dob varchar(255),
+    address varchar(255),
+    phone varchar(255),
+    email varchar(255),
+    class_x varchar(255),
+    class_xii varchar(255),
+    aadhar varchar(255),
+    rollno varchar(255),
+    course varchar(255),
+    branch varchar(255)
+); 
+
+6. Create teacher table
+SQL Command:
+create table teacher (
+    name varchar(255),
+    fathers_name varchar(255),
+    age varchar(255),
+    dob varchar(255),
+    address varchar(255),
+    phone varchar(255),
+    email varchar(255),
+    class_x varchar(255),
+    class_xii varchar(255),
+    aadhar varchar(255),
+    course varchar(255),
+    emp_id varchar(255),
+    dept varchar(255)
+); 
+
+7. Create fee table
+SQL Command:
+create table fee (
+    rollno varchar(255),
+    name varchar(255),
+    fathers_name varchar(255),
+    course varchar(255),
+    branch varchar(255),
+    semester varchar(255),
+    fee_paid varchar(255)
+); 
+
+8. Create attendance_student table
+SQL Command:
+create table attendance_student (
+    rollno varchar(255),
+    Date varchar(255),
+    first varchar(255),
+    second varchar(255)
+); 
+
+9. Create subject table
+SQL Command:
+create table subject (
+    rollno varchar(255),
+    subject1 varchar(255),
+    subject2 varchar(255),
+    subject3 varchar(255),
+    subject4 varchar(255),
+    subject5 varchar(255)
+); 
+
+10. Create subject marks
+SQL Command:
+create table marks (
+    rollno varchar(255),
+    marks1 varchar(255),
+    marks2 varchar(255),
+    marks3 varchar(255),
+    marks4 varchar(255),
+    marks5 varchar(255)
+); 
+
+
+
+
+
+
+
