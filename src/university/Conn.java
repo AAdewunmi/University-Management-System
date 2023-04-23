@@ -8,13 +8,37 @@ package university;
  *
  * @author adrianadewunmi
  */
-public class Conn {
+/**
+ *
+ * @author adrianadewunmi
+ */
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+/**
+ *
+ * @author adrianadewunmi
+ */
+public class Conn {
+    
+    Connection c;
+    Statement s;
+    
+    public Conn(){
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            c = DriverManager.getConnection("jdbc:mysql://localhost:3306/ums", "root", "abc");
+            s = c.createStatement();
+        } catch (SQLException e) {
+            System.out.println("Connection Error: " + e);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Conn.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
+    
     
 }
