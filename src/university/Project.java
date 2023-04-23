@@ -336,11 +336,11 @@ public class Project extends JFrame implements ActionListener{
         }
         else if(msg.equals("Notepad")){
             try{
-                Runtime.getRuntime().exec("notepad.exe");
+                // Runtime.getRuntime().exec("notepad.exe");
             }catch(Exception e){ }
         }else if(msg.equals("Calculator")){
             try{
-                Runtime.getRuntime().exec("calc.exe");
+                // Runtime.getRuntime().exec("calc.exe");
             }catch(Exception e){ }
         }else if(msg.equals("Web Browser")){
             
